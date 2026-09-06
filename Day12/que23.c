@@ -1,0 +1,39 @@
+/*
+ * Name : Rajnandhini
+ * Roll : 590035256
+ * Day : 12 Question: 23
+ * Date : 06-09-2026
+ *
+ * PROBLEM STATEMENT:
+ * Write a program to calculate library fine based on late days as follows:
+ */
+#include <stdio.h>
+
+int main()
+{
+    int days, fine;
+
+    scanf("%d", &days);
+
+    if (days <= 5)
+    {
+        fine = days * 2;
+        printf("Fine ₹%d", fine);
+    }
+    else if (days <= 10)
+    {
+        fine = (5 * 2) + ((days - 5) * 4);
+        printf("Fine ₹%d", fine);
+    }
+    else if (days <= 30)
+    {
+        fine = (5 * 2) + (5 * 4) + ((days - 10) * 6);
+        printf("Fine ₹%d", fine);
+    }
+    else
+    {
+        printf("Membership Cancelled");
+    }
+
+    return 0;
+}
